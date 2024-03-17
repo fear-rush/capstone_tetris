@@ -31,9 +31,9 @@ if selected_menu == "Home":
     st.write("[Instagram](https://www.instagram.com/snrhlz/)")
     from PIL import Image
 
-    # image_path = "C:/Users/Salma/Downloads/jobstreet logo.png"
-    # image = Image.open(image_path)
-    # st.image(image, width=500)
+    image_path = "./jobstreet logo.png"
+    image = Image.open(image_path)
+    st.image(image, width=500)
 
     st.subheader("Problem and User")
     with st.expander("Problem"):
@@ -49,10 +49,10 @@ if selected_menu == "Home":
             2. Perusahaan: Untuk mendapatkan wawasan tentang bagaimana mereka dinilai oleh para pencari kerja dan bagaimana mereka dapat meningkatkan daya tarik mereka sebagai tempat kerja.
 """ )
 
-    with st.expander("Flowchart"):
-        image_path = "C:/Users/Salma/Downloads/tetris_flow.png"
-        image = Image.open(image_path)
-        st.image(image, width=800)
+    # with st.expander("Flowchart"):
+    #     image_path = "./tetris_flow.png"
+    #     image = Image.open(image_path)
+    #     st.image(image, width=800)
         
     st.subheader("Data Collection")
     st.markdown(
@@ -339,14 +339,14 @@ elif selected_menu == "Category Prediction (Machine Learning)":
     from sklearn.feature_extraction.text import TfidfVectorizer
 
     # Load pre-trained models
-    with open('./rf_model.pkl', 'rb') as rf_file:
+    with open('rf_model.pkl', 'rb') as rf_file:
         rf_model = pickle.load(rf_file)
 
-    with open('./logistic_model.pkl', 'rb') as logistic_file:
+    with open('logistic_model.pkl', 'rb') as logistic_file:
         logistic_model = pickle.load(logistic_file)
 
     # Load the vectorizer used during training
-    with open('./tfidf_vectorizer.pkl', 'rb') as vectorizer_file:
+    with open('tfidf_vectorizer.pkl', 'rb') as vectorizer_file:
         tfidf_vectorizer = pickle.load(vectorizer_file)
 
     # Streamlit app

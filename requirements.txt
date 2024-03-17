@@ -1,0 +1,7 @@
+streamlit
+pandas
+altair
+numpy
+matplotlib.pyplot
+plotly.express
+pickle
